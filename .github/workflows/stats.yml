@@ -8,7 +8,7 @@ on:
 
   push:
     branches:
-    - main
+      - main
 
 jobs:
   generate:
@@ -22,9 +22,9 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&hide_title=false&hide_rank=true&show_icons=true&include_all_commits=false&count_private=false&disable_animations=false&theme=dracula&locale=en&hide_border=false&custom_title=Educhnn          path: dist/stats.svg
+          options: username=${{ github.repository_owner }}&hide_title=false&hide_rank=true&show_icons=true&include_all_commits=false&count_private=false&disable_animations=false&theme=dracula&locale=en&hide_border=false&custom_title=Educhnn
+          path: dist/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
 
       - name: push stats.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
